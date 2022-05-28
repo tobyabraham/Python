@@ -4,12 +4,27 @@
 # find_anagrams("below", "elbow") --> True
 
 
-def find_anagram(word, anagram):
-    # [assignment] Add your code here
-    if (sorted(word)) == (sorted(anagram)):
-        return True
-    return False
+from traceback import print_stack
 
-print(find_anagram("below", "elbow"))        
+
+def find_anagram():
+    # [assignment] Add your code here
+    word = input("Enter first word here:")
+    anagram = input("Enter second word here:")
+    s1 = word.lower()
+    s2 = anagram.lower()
+    if len(s1) == len(s2):
+        sort_s1 = sorted(s1)
+        sort_s2 = sorted(s2)
+
+        if sort_s1 == sort_s2:
+            return True
+
+        else:
+            return False
+    else:
+        return False
+        
+print(find_anagram())    
 
 
